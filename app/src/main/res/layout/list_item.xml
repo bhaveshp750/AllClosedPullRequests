@@ -17,23 +17,21 @@
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/Title"
             android:maxLines="1"
             android:ellipsize="end"
+            android:textSize="16sp"
             android:text="Title"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/Text"
             android:maxLines="1"
             android:ellipsize="end"
-            android:text="Created_Date"/>
+            android:text="Created"/>
         <TextView
             android:id="@+id/created_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/Text"
             android:maxLines="1"
             android:ellipsize="end"
             android:textStyle="bold|italic"
@@ -41,15 +39,13 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/Text"
             android:maxLines="1"
             android:ellipsize="end"
-            android:text="Closed_Date"/>
+            android:text="Closed"/>
         <TextView
             android:id="@+id/closed_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/Text"
             android:maxLines="1"
             android:ellipsize="end"
             android:textStyle="bold|italic"
@@ -57,7 +53,6 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/Text"
             android:maxLines="1"
             android:ellipsize="end"
             android:text="Username"/>
@@ -65,7 +60,6 @@
             android:id="@+id/user"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/Text"
             android:maxLines="1"
             android:ellipsize="end"
             android:textStyle="bold|italic"
@@ -86,9 +80,9 @@
         android:layout_margin="8dp"
         android:adjustViewBounds="true"
         android:background="@color/white"
-        android:elevation="2dp"
+        android:elevation="4dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/_1"
+
         app:shapeAppearance="?attr/actionButtonStyle" />
 
 </LinearLayout>

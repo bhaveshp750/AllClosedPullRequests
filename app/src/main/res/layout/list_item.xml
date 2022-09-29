@@ -7,27 +7,77 @@
     android:layout_margin="8dp">
 
     <LinearLayout
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:gravity="center_vertical"
-        android:layout_weight="2"
         android:orientation="vertical">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/user_image"
+            app:shapeAppearanceOverlay="@style/roundedImageView"
+            android:layout_gravity="center"
+            android:layout_width="108dp"
+            android:layout_height="108dp"
+            android:layout_margin="8dp"
+            android:adjustViewBounds="true"
+            android:background="@color/white"
+            android:elevation="4dp"
+            android:scaleType="centerCrop"
+            app:shapeAppearance="?attr/actionButtonStyle" />
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:text="userName"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:gravity="center">
 
         <TextView
             android:id="@+id/title"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:maxLines="1"
+            android:layout_alignParentTop="true"
+            android:layout_margin="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="4dp"
             android:ellipsize="end"
-            android:textSize="16sp"
-            android:text="Title"/>
+            android:maxLines="3"
+            android:text="Title"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/create_icon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_below="@id/title"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="6dp"
+            android:src="@drawable/ic_git_merge" />
 
         <TextView
+            android:id="@+id/label_created_on"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:maxLines="1"
             android:ellipsize="end"
-            android:text="Created"/>
+            android:text="Created On"
+            android:layout_below="@id/title"
+            android:layout_toEndOf="@id/create_icon"/>
         <TextView
             android:id="@+id/created_date"
             android:layout_width="wrap_content"
@@ -35,13 +85,29 @@
             android:maxLines="1"
             android:ellipsize="end"
             android:textStyle="bold|italic"
-            android:text="09-11-12"/>
+            android:text="09-11-12"
+            android:layout_below="@id/label_created_on"
+            android:layout_toEndOf="@id/create_icon"/>
+
+        <ImageView
+            android:id="@+id/closed_icon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_below="@id/create_icon"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="6dp"
+            android:src="@drawable/ic_merged" />
+
         <TextView
+            android:id="@+id/label_closed_on"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
             android:maxLines="1"
             android:ellipsize="end"
-            android:text="Closed"/>
+            android:text="closed date"
+            android:layout_below="@id/created_date"
+            android:layout_toEndOf="@id/closed_icon"/>
         <TextView
             android:id="@+id/closed_date"
             android:layout_width="wrap_content"
@@ -49,40 +115,10 @@
             android:maxLines="1"
             android:ellipsize="end"
             android:textStyle="bold|italic"
-            android:text="09-11-12"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:maxLines="1"
-            android:ellipsize="end"
-            android:text="Username"/>
-        <TextView
-            android:id="@+id/user"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:maxLines="1"
-            android:ellipsize="end"
-            android:textStyle="bold|italic"
-            android:text="by Adam"/>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="5dp">
-        </View>
+            android:text="09-11-12"
+            android:layout_below="@id/label_closed_on"
+            android:layout_toEndOf="@id/closed_icon"/>
 
-    </LinearLayout>
-
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/image_view"
-        app:shapeAppearanceOverlay="@style/roundedImageView"
-        android:layout_gravity="center"
-        android:layout_width="125dp"
-        android:layout_height="125dp"
-        android:layout_margin="8dp"
-        android:adjustViewBounds="true"
-        android:background="@color/white"
-        android:elevation="4dp"
-        android:scaleType="centerCrop"
-
-        app:shapeAppearance="?attr/actionButtonStyle" />
+    </RelativeLayout>
 
 </LinearLayout>

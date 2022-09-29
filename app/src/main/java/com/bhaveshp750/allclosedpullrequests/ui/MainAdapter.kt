@@ -23,8 +23,8 @@ class MainAdapter(
         holder.title.text = pullRequestList[position].title
         holder.createdDate.text = pullRequestList[position].created_date
         holder.closedDate.text = pullRequestList[position].closed_date
-        holder.username.text = pullRequestList[position].user.name
-        holder.imageView.loadImage(pullRequestList[position].user.avatar_url)
+        holder.userName.text = pullRequestList[position].user.name
+        holder.userImage.loadImage(pullRequestList[position].user.avatar_url)
     }
 
     override fun getItemCount(): Int {
@@ -41,8 +41,8 @@ class MainAdapter(
         val title: TextView = view.findViewById(R.id.title)
         val createdDate: TextView = view.findViewById(R.id.created_date)
         val closedDate: TextView = view.findViewById(R.id.closed_date)
-        val username: TextView = view.findViewById(R.id.user)
-        val imageView: ImageView = view.findViewById(R.id.image_view)
+        val userName: TextView = view.findViewById(R.id.user_name)
+        val userImage: ImageView = view.findViewById(R.id.user_image)
     }
 
 }
@@ -50,7 +50,7 @@ class MainAdapter(
 fun ImageView.loadImage(uri: String?) {
     val options = RequestOptions()
         .placeholder(R.drawable.progress_animation)
-        .error(R.mipmap.ic_launcher_round)
+        .error(R.drawable.ic_error)
 
     Glide.with(this.context)
         .setDefaultRequestOptions(options)

@@ -1,6 +1,5 @@
 package com.bhaveshp750.allclosedpullrequests.modal
 
-import kotlinx.coroutines.flow.Flow
 import retrofit2.http.GET
 
 interface PullRequestsApi {
